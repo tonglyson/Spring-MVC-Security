@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+    .main{
+        width: 50%;
+        margin: 50px auto;
+        padding: 20px;
+    }
+</style>
+<body>
+<div class="main">
+    <h2>LOGIN PAGE</h2>
+    <div th:if="${success}" th:text="${success}" class="success" > Dang ky tai khoan thanh cong </div>
+    <div th:if="${param.error}" class="error">Sai tk hoac mat khau</div>
+    <form th:action="@{/login}"  method="post">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input  type="text" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Pass</label>
+            <input  type="password" class="form-control" id="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng nhập</button> &nbsp;
+        <a href="" th:href="@{/register}" class="btn btn-primary">Đăng ký</a>
+    </form>
+</div>
+</body>
+</html>

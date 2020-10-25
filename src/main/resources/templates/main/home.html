@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+    Full Name: <span th:text="${userLogged.getFirstName() + ' ' + userLogged.getLastName()}"></span><br>
+    Authenticated user roles:
+    Logged user: <span sec:authentication="name"></span>
+    Roles: <span sec:authentication="principal.authorities"></span>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+.container{
+    width: 50%;
+    height: auto;
+   
+}
+.main{
+    border: 1px solid lightskyblue;
+    padding: 10px ;
+    font-weight: bold;
+}
+.title{
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+}
+.top{
+    background-color: lightskyblue;
+    padding: 20px;
+    border: 1px solid lightskyblue;
+    font-weight: bold;
+}
+table{
+    text-align: center;
+}
+.btn{
+    margin: 20px 0;
+}
+h2{
+    padding: 20px 0;
+    display: inline-block;
+}
+.dropdown{
+    float: right;
+    margin-right: 10px;
+}
+span{
+    display: block;
+    color:red;
+    size: 12px;
+    font-style: italic;
+}
